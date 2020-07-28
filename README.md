@@ -30,6 +30,7 @@ Superuser password: make a really good password
 Superuser password: (again): repeat your really good password
 
 Server base url ["http://IPAddress"]: https://domain/ (or use IP)
+
 Honeymap url ["https://domain:3000"]: https://domain:3000 (or use IP)
 
 I suggest using HTTPS with a domain name. (you can set up that in a little while.)
@@ -40,28 +41,44 @@ Now we are all done with the MHN install. Go on over to your domain name or the 
 Next, we will use UFW (a firewall) to restrict access to only users, honeypots, and you (the admin.)
 
 — — — — — TL;DR end here — — — — —
+
 UFW can be installed with apt-get:
 root@IPAddress:/$ sudo apt-get install ufw
 It’s fairly easy to use and the commands we need are well documented here.
 MHN needs ports 3000 and 443 so we have to whitelist those. You will also need to add your ssh port(s). So for my server:
 
 root@IPAddress:/$ sudo ufw enable
+
 Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+
 Firewall is active and enabled on system startup
+
 root@IPAddress:/$ sudo ufw allow 443
+
 [sudo] password for adalovelace: 
+
 Rule added
+
 Rule added (v6)
+
 root@IPAddress:/$ sudo ufw allow 3000
+
 Rule added
+
 Rule added (v6)
+
 root@IPAddress:/$ sudo ufw allow 2282
+
 Rule added
+
 Rule added (v6)
+
 root@IPAddress:/$ sudo ufw allow from [my IP]
+
 Rule added
 
 Congratulations :)
+
 Then you've created your Honeymap and admin page. Next step is creating honeypots. Now you can create honeypots by admin ui page on the options.
 
 Take care, have a nice coding :)
