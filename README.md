@@ -1,8 +1,8 @@
-Ssh into your server from windows with PuTTY or you can just use terminal if you have linux or mac.
+Ssh into your server from windows with terminal.
 
 $ ssh root@IPAddress
 
-Welcome to Ubuntu 20.04 (GNU/Linux 2.6.32-042stab120.16 x86_64)
+Welcome to Ubuntu 20.04
 
 This is your user for logging in via SSH. You can always escalate to root once you get in there if you need to. Now I’ll edit parts of the ssh config at /etc/ssh/sshd_config:
 # What ports, IPs and protocols we listen for
